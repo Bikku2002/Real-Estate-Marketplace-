@@ -1,0 +1,95 @@
+/* Admin dashboard layout */
+.admin-wrap{display:grid;grid-template-columns:240px 1fr;min-height:100vh}
+.admin-side{background:#0f141c;border-right:1px solid var(--line);padding:16px}
+.admin-main{padding:24px}
+.admin-logo{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.side-link{display:flex;align-items:center;gap:10px;color:var(--muted);padding:10px 12px;border-radius:10px;transition:all 0.2s ease}
+.side-link.active, .side-link:hover{background:var(--card);color:var(--ink);transform:translateX(4px)}
+
+/* Admin Header */
+.admin-header{margin-bottom:32px}
+.admin-header h2{color:var(--ink);margin:0 0 8px;font-size:28px;font-weight:700}
+.admin-subtitle{color:var(--muted);margin:0;font-size:16px}
+
+/* Statistics Grid */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:32px}
+.stat-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;align-items:center;gap:16px;transition:all 0.3s ease}
+.stat-card:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,0.15)}
+.stat-icon{font-size:32px;opacity:0.8}
+.stat-number{font-size:24px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.stat-label{color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:0.5px}
+
+/* KYC Overview */
+.kyc-overview{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:32px}
+.kyc-overview h3{color:var(--ink);margin:0 0 16px;font-size:18px;font-weight:600}
+.kyc-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
+.kyc-stat{text-align:center;padding:16px;border-radius:12px;border:1px solid var(--line)}
+.kyc-stat.pending{background:rgba(245,166,35,0.1);border-color:rgba(245,166,35,0.3)}
+.kyc-stat.verified{background:rgba(47,176,112,0.1);border-color:rgba(47,176,112,0.3)}
+.kyc-stat.rejected{background:rgba(255,90,95,0.1);border-color:rgba(255,90,95,0.3)}
+.kyc-stat-number{font-size:28px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.kyc-stat-label{color:var(--muted);font-size:12px;margin-bottom:8px}
+.kyc-stat-action{color:var(--accent);text-decoration:none;font-size:12px;font-weight:600}
+
+/* Quick Actions */
+.quick-actions{margin-bottom:32px}
+.quick-actions h3{color:var(--ink);margin:0 0 16px;font-size:18px;font-weight:600}
+.action-buttons{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px}
+.action-btn{display:flex;flex-direction:column;align-items:center;gap:8px;padding:20px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px;text-decoration:none;color:var(--ink);transition:all 0.3s ease;position:relative}
+.action-btn:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 6px 20px rgba(0,0,0,0.1)}
+.action-icon{font-size:24px;opacity:0.8}
+.action-text{font-size:13px;font-weight:600;text-align:center}
+.action-badge{position:absolute;top:-6px;right:-6px;background:var(--accent);color:white;font-size:10px;font-weight:700;padding:2px 6px;border-radius:10px;min-width:16px;text-align:center}
+
+/* Dashboard Grid */
+.dashboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.dashboard-section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.dashboard-section.full-width{grid-column:1/-1}
+.dashboard-section h3{color:var(--ink);margin:0 0 16px;font-size:16px;font-weight:600}
+
+/* Empty State */
+.empty-state{text-align:center;padding:32px 16px;color:var(--muted)}
+.empty-icon{font-size:48px;margin-bottom:12px;opacity:0.5}
+.empty-text{font-size:14px}
+
+/* KYC List */
+.kyc-list{display:flex;flex-direction:column;gap:12px}
+.kyc-item{display:flex;align-items:center;justify-content:space-between;padding:12px;background:var(--elev);border-radius:8px;border:1px solid var(--line)}
+.kyc-user{flex:1}
+.kyc-name{font-weight:600;color:var(--ink);font-size:14px}
+.kyc-email{color:var(--muted);font-size:12px}
+.kyc-document{text-align:center}
+.doc-type{display:block;font-size:12px;font-weight:600;color:var(--ink)}
+.doc-date{font-size:11px;color:var(--muted)}
+.kyc-review-btn{background:var(--accent);color:white;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600}
+
+/* User List */
+.user-list{display:flex;flex-direction:column;gap:12px}
+.user-item{display:flex;align-items:center;justify-content:space-between;padding:12px;background:var(--elev);border-radius:8px;border:1px solid var(--line)}
+.user-info{flex:1}
+.user-name{font-weight:600;color:var(--ink);font-size:14px}
+.user-email{color:var(--muted);font-size:12px}
+.user-status{text-align:right}
+.kyc-badge{font-size:10px;padding:2px 6px;border-radius:4px;font-weight:600;text-transform:uppercase}
+.kyc-badge.kyc-pending{background:#f5a623;color:white}
+.kyc-badge.kyc-verified{background:#2fb070;color:white}
+.kyc-badge.kyc-rejected{background:#ff5a5f;color:white}
+.user-date{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+
+/* Legacy styles */
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.table{width:100%;border-collapse:separate;border-spacing:0 8px}
+.tr{background:var(--card);border:1px solid var(--line)}
+.th,.td{padding:10px 12px}
+.actions{display:flex;gap:8px}
+.form-inline{display:flex;gap:8px;flex-wrap:wrap}
+
+/* Responsive */
+@media (max-width:768px){
+  .admin-wrap{grid-template-columns:1fr}
+  .admin-side{display:none}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .dashboard-grid{grid-template-columns:1fr}
+  .action-buttons{grid-template-columns:repeat(2,1fr)}
+}
+
